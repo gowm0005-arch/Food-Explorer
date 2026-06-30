@@ -24,7 +24,6 @@ const Navbar = ({ setShowLogin }) => {
         <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
         <Link to="/contribute" onClick={() => setMenu("contribute")} className={`${menu === "contribute" ? "active" : ""}`}>Add yours</Link>
         <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact us</a>
-        <a href='http://localhost:5174/login' onClick={() => setMenu("admin")} className={`${menu === "admin" ? "active" : ""}`}>Admin</a>
       </ul>
       <div className="navbar-right">
 
