@@ -5,7 +5,7 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 export const connectDB = async () => {
 
-    await mongoose.connect('mongodb+srv://Goutham:mvg1212@cluster0.taxzcae.mongodb.net/food-del').then(() => console.log("DB Connected"));
+    await mongoose.connect(process.env.MONGO_URI).then(() => console.log("DB Connected"));
 
 }
 
