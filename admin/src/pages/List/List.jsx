@@ -85,7 +85,10 @@ const List = () => {
         {list.map((item, index) => {
           return (
             <div key={index} className='list-table-format'>
-              src={image && image.startsWith('http') ? image : url + "/images/" + image}
+              <img
+                src={item.image && item.image.startsWith('http') ? item.image : `${url}/images/${item.image}`}
+                alt={item.name}
+              />
               <p>{item.name}</p>
               <p>{item.category}</p>
               {editingFoodId === item._id ? (
