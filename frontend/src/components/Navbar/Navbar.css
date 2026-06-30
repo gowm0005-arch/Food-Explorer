@@ -75,6 +75,8 @@
     display: none;
     right: 0;
     z-index: 1;
+    min-width: 150px;
+    white-space: nowrap
 }
 
 .navbar-profile-dropdown li {
@@ -94,6 +96,7 @@
 
 .navbar-profile:hover .navbar-profile-dropdown {
     display: flex;
+    padding: 10px 0;
     flex-direction: column;
     gap: 10px;
     background-color: #fff2ef;
