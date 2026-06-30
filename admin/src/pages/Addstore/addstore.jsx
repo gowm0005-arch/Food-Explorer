@@ -197,7 +197,7 @@ const Addstore = () => {
                     </div>
                     {restaurants.map((restaurant) => (
                         <div key={restaurant._id} className='restaurant-list-format'>
-                            <img src={`${url}/images/` + restaurant.image} alt={restaurant.name} />
+                            <img src={restaurant.image && restaurant.image.startsWith('http') ? restaurant.image : `${url}/images/${restaurant.image}`} alt={restaurant.name} />
                             <p>{restaurant.name}</p>
                             <p>{restaurant.cuisine}</p>
                             <p>{restaurant.deliveryTime}</p>

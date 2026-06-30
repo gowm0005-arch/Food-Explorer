@@ -103,7 +103,7 @@ const RestaurantShowcase = () => {
 
                     return (
                         <article className='restaurant-card' key={restaurant._id}>
-                            <img className='restaurant-card-image' src={`${url}/images/${restaurant.image}`} alt={restaurant.name} />
+                            <img className='restaurant-card-image' src={restaurant.image && restaurant.image.startsWith('http') ? restaurant.image : `${url}/images/${restaurant.image}`} alt={restaurant.name} />
                             <div className='restaurant-card-content'>
                                 <div className='restaurant-card-top'>
                                     <div>
@@ -158,7 +158,7 @@ const RestaurantShowcase = () => {
                                                 <strong>{item.name}</strong>
                                                 <p>{item.feedback}</p>
                                             </div>
-                                            {item.image ? <img src={`${url}/images/${item.image}`} alt={item.name} /> : null}
+                                            {item.image ? <img src={item.image.startsWith('http') ? item.image : `${url}/images/${item.image}`} alt={item.name} /> : null}
                                         </div>
                                     )) : <p className='restaurant-feedback-empty'>No feedback yet. Be the first to add one.</p>}
                                 </div>
