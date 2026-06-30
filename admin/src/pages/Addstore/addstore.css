@@ -1,0 +1,106 @@
+.add-store{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6D6D6D;
+    font-size: 16px;
+}
+
+.add-store form{
+    gap: 20px;
+}
+
+.add-store-img-upload img{
+    width: 120px;
+}
+
+.add-store-name,
+.add-store-description,
+.add-store-address{
+    width: max(45%,320px);
+}
+
+.add-store-name input,
+.add-store-description textarea,
+.add-store-address textarea,
+.add-store-grid input{
+    padding: 10px;
+}
+
+.add-store-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 240px));
+    gap: 20px;
+}
+
+.add-store-btn{
+    width: fit-content;
+    border: none;
+    padding: 12px 18px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.restaurant-list{
+    margin-top: 45px;
+    width: min(900px, 100%);
+}
+
+.restaurant-list > p{
+    margin-bottom: 15px;
+}
+
+.restaurant-list-format{
+    display: grid;
+    grid-template-columns: 0.7fr 1.5fr 1fr 1fr 0.8fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+}
+
+.restaurant-list-format.title{
+    background-color: #f9f9f9;
+}
+
+.restaurant-list-format img{
+    width: 55px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.restaurant-remove-btn{
+    width: fit-content;
+    border: none;
+    padding: 8px 12px;
+    background-color: #d9342b;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 750px){
+    .add-store{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .add-store-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-list-format{
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 12px;
+    }
+
+    .restaurant-list-format.title{
+        display: none;
+    }
+
+    .restaurant-list-format p:nth-of-type(2),
+    .restaurant-list-format p:nth-of-type(3){
+        display: none;
+    }
+}

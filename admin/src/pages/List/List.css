@@ -1,0 +1,53 @@
+.list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+}
+.list-table-format.title{
+    background-color: #f9f9f9;
+}
+.list-table-format img{
+    width: 50px;
+}
+.price-edit{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.price-edit input{
+    width: 80px;
+    padding: 6px 8px;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+.list-actions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.list-actions button{
+    border: 1px solid #cacaca;
+    background: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.list-actions button:hover{
+    background-color: #f9f9f9;
+}
+@media(max-width:600px){
+
+    .list-table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 15px;
+    }
+    .list-table-format.title{
+        display: none;
+    }
+}
